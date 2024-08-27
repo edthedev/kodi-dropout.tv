@@ -26,7 +26,12 @@ def log(message, level=xbmc.LOGNOTICE):
 # Starting the Addon
 log("Starting " + __addonName__)
 
-launch = ["robot", "dropout.robot"]
+username = __addon__.getSetting('username')
+password = __addon__.getSetting('password')
+
+launch = ["robot", "dropout.robot", 
+"--variable", f"username:{username}",
+"--variable", f"password:{password}"]
 
 # Var to hold current display sleep timer
 displayoff = ""
