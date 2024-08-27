@@ -16,7 +16,7 @@ __addonName__ = __addon__.getAddonInfo('name')
 __version__ = __addon__.getAddonInfo('version')
 
 subprocess.run(
-    [sys.executable, '-m', 'pip', 'install', 'robotframework-SeleniumLibrary'])
+    ['python', '-m', 'pip', 'install', 'robotframework-SeleniumLibrary'])
 
 # Method to print logs on a standard way
 def log(message, level=xbmc.LOGNOTICE):
